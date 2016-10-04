@@ -28,6 +28,10 @@
   </tbody>
 </table>
 
+<p>How many prodyucts: <%= Product.count %> </p>
+<p>Average price: $<%= Product.average('price').round(2) %> </p>
+<p>Total sotck: <%= Product.sum('stock_quantity') %></p>
+
 <% 100.times do %>
     <p>Chunky Bacon</p>
   <% end %>
